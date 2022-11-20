@@ -1,0 +1,339 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pancharm</title>
+    <!-- Set Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <!-- Bootstrap 4 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- Fontawesome 5 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Slick CSS Import -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- Mobile sidebar -->
+    <div class="mobile-sidebar">
+      <a href="">New Arrivals</a>
+      <a href="">Men</a>
+      <a href="">Women</a>
+      <a href="">Our Stories</a>
+      <a href="">Stores</a>
+      <a href="">Contact</a>
+    </div>
+
+    <!-- Search field -->
+    <div class="search-field p-2">
+      <div class="container">
+        <form
+          class="search-field-group d-flex align-items-center justify-content-between"
+        >
+          <input
+            class="rounded w-100 py-1 px-2"
+            id="search-field-input"
+            type="text"
+            placeholder="Type some product to search..."
+          />
+          <button class="rounded py-1 px-3" id="search-field-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Main header -->
+    <div class="main-header py-3">
+      <div class="container">
+        <!-- Navbar on desktop -->
+        <div class="main-nav justify-content-center align-items-center">
+          <a href="">New Arrivals</a>
+          <a href="">Men</a>
+          <a href="">Women</a>
+          <a class="nav-logo-desktop" href="">
+            <img src="./images/pancharm-logo-nav.png" alt="" />
+          </a>
+          <a href="">Our Stories</a>
+          <a href="">Stores</a>
+          <a href="">Contact</a>
+        </div>
+
+        <!-- Navbar on mobile -->
+        <div class="mobile-nav">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <div class="mobile-nav-toggle">
+                <button id="sidebar-toggle">
+                  <i class="fas fa-bars"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="mobile-nav-logo d-block mx-auto">
+                <a class="nav-logo-mobile" href="">
+                  <img src="./images/pancharm-logo-flex.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="mobile-nav-right d-flex align-items-center">
+                <button id="search-field-toggle">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button>
+                  <i class="fas fa-user"></i>
+                </button>
+                <button><i class="fas fa-shopping-cart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-container">
+      <!-- Banner slide -->
+      <div class="banner-slide mb-5">
+        <div>
+          <img class="img-fluid" src="./images/banner-example.png" alt="" />
+        </div>
+        <div>
+          <img class="img-fluid" src="./images/banner-example.png" alt="" />
+        </div>
+        <div>
+          <img class="img-fluid" src="./images/banner-example.png" alt="" />
+        </div>
+      </div>
+
+      <div class="container pb-5">
+        <div class="row">
+          <div class="col-12 col-md-6 mb-3 mb-lg-0">
+            <div class="category-box">
+              <img
+                src="./images/banner-example.png"
+                alt=""
+                class="img-fluid rounded"
+              />
+              <div class="category-box-overlay">
+                <h2>Men</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="category-box">
+              <img
+                src="./images/banner-example.png"
+                alt=""
+                class="img-fluid rounded"
+              />
+              <div class="category-box-overlay">
+                <h2>Women</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Collection -->
+      <div class="new-collection py-5 bg-main">
+        <div class="container">
+          <h1 class="font-weight-bold text-uppercase text-white">
+            Bộ sưu tập mới 2022
+          </h1>
+          <p class="text-justify my-4 text-white">
+            KHÁM PHÁ NHỮNG ĐIỂM ĐẶC BIỆT TRONG GOLF COLLECTION 22
+            <br /><br />Đâu là những lý do khiến BST Golf Collection 22 chinh
+            phục được giới mộ điệu? Đánh dấu những bước tiến quan trọng trong
+            hành trình chinh phục chất liệu và công nghệ, BST Golf Collection 22
+            mang đến tinh thần truyền cảm hứng cho cộng đồng, lan tỏa năng
+            lượng.<br /><br />
+            Giờ đây, những golfer chuyên nghiệp và những người yêu
+          </p>
+          <button class="inverse-main-button d-block mx-auto">See more</button>
+        </div>
+      </div>
+
+      <div class="new-arrivals py-5">
+        <div class="container">
+          <h1 class="text-center text-uppercase main-color font-weight-bold">
+            New Arrivals
+          </h1>
+          <img
+            src="./images/banner-example.png"
+            alt=""
+            class="img-fluid my-4 rounded"
+          />
+          <p class="text-justify mb-4">
+            Sự tự do trong tâm trí, trong cuộc sống được trân trọng khiến diện
+            mạo trở nên tươi mới hơn. Khi nguồn cảm hứng đến từ những điều đơn
+            giản, những lựa chọn thanh lịch sẽ giúp nâng tầm phong cách. Sự tân
+            thời trong địa hạt thời trang Italy chính là những tác phẩm lịch lãm
+            nhận được sự công nhận trên toàn thế giới nhờ sự biểu đạt đặc biệt.
+            Hãy để những outfit của GIOVANNI dẫn lối, khám phá phong cách tiềm
+            ẩn trong bạn.
+          </p>
+          <button class="main-button d-block mx-auto">Buy now</button>
+        </div>
+      </div>
+
+      <div class="our-brand py-5 bg-main">
+        <div class="container">
+          <h1 class="text-white text-uppercase font-weight-bold mb-4">
+            Discover our brands
+          </h1>
+          <div class="row">
+            <div class="col-6 col-md-3 mb-3 mb-lg-0">
+              <div class="category-box">
+                <img
+                  src="./images/square-product-example.jpg"
+                  alt=""
+                  class="img-fluid rounded"
+                />
+                <div class="category-box-overlay">
+                  <h2>Brand</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3 mb-lg-0">
+              <div class="category-box">
+                <img
+                  src="./images/square-product-example.jpg"
+                  alt=""
+                  class="img-fluid rounded"
+                />
+                <div class="category-box-overlay">
+                  <h2>Brand</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3 mb-lg-0">
+              <div class="category-box">
+                <img
+                  src="./images/square-product-example.jpg"
+                  alt=""
+                  class="img-fluid rounded"
+                />
+                <div class="category-box-overlay">
+                  <h2>Brand</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3 mb-lg-0">
+              <div class="category-box">
+                <img
+                  src="./images/square-product-example.jpg"
+                  alt=""
+                  class="img-fluid rounded"
+                />
+                <div class="category-box-overlay">
+                  <h2>Brand</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3 mb-3 mb-md-0">
+            <h4 class="font-weight-bold text-uppercase mb-3">May we help</h4>
+            <a class="d-block py-2" href="">Contact us</a>
+            <a class="d-block py-2" href="">Order by phone</a>
+            <a class="d-block py-2" href="">FAQ</a>
+            <a class="d-block py-2" href="">Delivery</a>
+            <a class="d-block py-2" href="">Warranty, Exchanges & Returns</a>
+            <a class="d-block py-2" href="">Stores</a>
+          </div>
+          <div class="col-12 col-md-3 mb-3 mb-md-0">
+            <h4 class="font-weight-bold text-uppercase mb-3">Company</h4>
+            <a class="d-block py-2" href="">About us</a>
+            <a class="d-block py-2" href="">Stories</a>
+            <a class="d-block py-2" href="">Press</a>
+            <a class="d-block py-2" href="">Production</a>
+          </div>
+          <div class="col-12 col-md-3 mb-3 mb-md-0">
+            <h4 class="font-weight-bold text-uppercase mb-3">Contact</h4>
+            <p class="d-block py-2" href="">Call : xxxxxxxxxxxx</p>
+            <p class="d-block py-2" href="">Email : pancharm@gmail.com</p>
+            <p class="d-block py-2" href="">Address : , Vietnam</p>
+          </div>
+          <div class="col-12 col-md-3 mb-3 mb-md-0">
+            <img
+              src="./images/pancharm-logo-flex.png"
+              alt=""
+              class="img-fluid mb-3"
+            />
+            <p class="font-weight-bold">Bring you bests.</p>
+            <div class="social-media my-3">
+              <img src="./images/icon/telegram-icon.png" alt="" />
+              <img src="./images/icon/tiktok-icon.png" alt="" />
+              <img src="./images/icon/twitter-icon.png" alt="" />
+              <img src="./images/icon/youtube-icon.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-center">
+      Copyright©<span class="font-weight-bold">Pancharm</span>. All right
+      reserved.
+    </p>
+
+    <!-- jQuery 3.6.1 CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap 4 JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Slick JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Local JS -->
+    <script defer src="./js/app.js"></script>
+  </body>
+</html>

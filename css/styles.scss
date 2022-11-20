@@ -1,0 +1,337 @@
+// Import Font Face
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../font/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../font/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../font/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Black";
+  src: url("../font/Montserrat-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Italic";
+  src: url("../font/Montserrat-Italic.ttf") format("truetype");
+}
+
+// Montserrat Font Variables
+
+$montserrat-400: "Montserrat-Regular";
+$montserrat-500: "Montserrat-Medium";
+$montserrat-700: "Montserrat-Bold";
+$montserrat-900: "Montserrat-Black";
+$montserrat-italic: "Montserrat-Italic";
+
+// Main Color Variables
+$pancharm-main: #b14f28;
+$pancharm-alt: #231f20;
+
+// Breakpoint Mixin
+
+$min-xs: 375px;
+$min-sm: 576px;
+$min-md: 768px;
+$min-lg: 992px;
+$min-xl: 1200px;
+
+// min screen 375px
+@mixin min-xs {
+  @media screen and (min-width: $min-xs) {
+    @content;
+  }
+}
+
+// min screen 576px
+@mixin min-sm {
+  @media screen and (min-width: $min-sm) {
+    @content;
+  }
+}
+
+// min screen 768px
+@mixin min-md {
+  @media screen and (min-width: $min-md) {
+    @content;
+  }
+}
+
+// min screen 992px
+@mixin min-lg {
+  @media screen and (min-width: $min-lg) {
+    @content;
+  }
+}
+
+// min screen 1200px
+@mixin min-xl {
+  @media screen and (min-width: $min-xl) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+// Scroll bar custom
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $pancharm-main;
+}
+
+// Main & Alt color classes
+
+.main-color {
+  color: $pancharm-main;
+}
+
+.alt-color {
+  color: $pancharm-alt;
+}
+
+.bg-main {
+  background: $pancharm-main;
+}
+
+// Transform bigger x1.02 for product block
+@mixin bigger-block {
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+a {
+  font-family: $montserrat-400;
+  color: $pancharm-alt !important;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  &:focus {
+    outline: 0 solid;
+  }
+  &:hover {
+    text-decoration: none;
+    color: #a13e17 !important;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+  font-family: $montserrat-400;
+}
+
+html,
+body {
+  font-weight: 400;
+  font-family: $montserrat-400 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  position: relative;
+}
+
+p {
+  font-family: $montserrat-400;
+  margin-bottom: 0;
+  color: $pancharm-alt;
+}
+
+.main-button {
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 1px solid $pancharm-main;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  background-color: $pancharm-main;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background: #a13e17;
+  }
+}
+
+.inverse-main-button {
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 1px solid $pancharm-main;
+  color: $pancharm-main;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border-radius: 0.25rem;
+  transition: 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: $pancharm-alt;
+    color: #fff;
+  }
+}
+
+button {
+  font-family: $montserrat-400 !important;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: $montserrat-400;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+
+  &:hover,
+  &:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  }
+}
+
+.mobile-sidebar {
+  display: none;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 0px;
+  height: 100%;
+  z-index: 2;
+  background: $pancharm-alt;
+  a {
+    color: #fff !important;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    white-space: nowrap;
+    &:hover {
+      text-decoration: none;
+      color: #a13e17 !important;
+    }
+  }
+}
+
+.search-field {
+  display: none;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  z-index: 2;
+  .search-field-group {
+    gap: 10px;
+    input,
+    button {
+      border: 1px solid $pancharm-main;
+      background: #fff;
+    }
+    button {
+      background: $pancharm-main;
+      color: white;
+      align-self: stretch;
+    }
+  }
+}
+
+.main-header {
+  background: linear-gradient(180deg, $pancharm-main 0%, rgba(0, 0, 0, 0) 100%);
+  .main-nav {
+    display: none;
+    @include min-lg {
+      display: flex;
+      gap: 20px;
+      a {
+        font-family: $montserrat-500;
+        font-size: 1.25rem;
+        white-space: nowrap;
+      }
+      .nav-logo-desktop {
+        width: 10%;
+        margin: 0 1rem;
+      }
+    }
+  }
+  .mobile-nav {
+    position: relative;
+    @include min-lg {
+      display: none;
+    }
+    button {
+      background: none;
+    }
+    i {
+      font-size: 25px;
+    }
+    .mobile-nav-logo {
+      max-width: 200px;
+    }
+    .mobile-nav-right {
+      justify-content: right;
+      gap: 15px;
+    }
+  }
+}
+
+.banner-slide {
+  width: 100%;
+  .slick-slide {
+    height: auto; // ← that must not be ignored
+  }
+  .slick-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+}
+
+.category-box {
+  @include bigger-block;
+  position: relative;
+  width: 100%;
+  .category-box-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 1rem;
+  }
+}
