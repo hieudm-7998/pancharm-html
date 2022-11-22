@@ -152,33 +152,45 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 .mobile-sidebar {
   display: none;
   position: absolute;
-  top: 75px;
+  top: 76px;
   left: 0;
   width: 0px;
-  height: 100%;
+  height: 100vh;
   z-index: 2;
   background: #231f20;
+  flex-direction: column;
 }
 .mobile-sidebar a {
   color: #fff !important;
-  display: block;
-  padding: 10px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  white-space: nowrap;
 }
 .mobile-sidebar a:hover {
   text-decoration: none;
   color: #a13e17 !important;
 }
+.mobile-sidebar .sidebar-nav {
+  display: block;
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+.mobile-sidebar .sidebar-collapse {
+  padding: 0 0 0 30px;
+  display: flex;
+  flex-direction: column;
+}
 
 .search-field {
   display: none;
   position: absolute;
-  top: 75px;
+  top: 75.98px;
   left: 0;
   width: 100%;
   height: 0;
   z-index: 2;
+}
+@media screen and (min-width: 992px) {
+  .search-field {
+    top: 97px;
+  }
 }
 .search-field .search-field-group {
   gap: 10px;
@@ -195,7 +207,11 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 }
 
 .main-header {
-  background: linear-gradient(180deg, #b14f28 0%, rgba(0, 0, 0, 0) 100%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  background: white;
 }
 .main-header .main-nav {
   display: none;
@@ -211,8 +227,23 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
     white-space: nowrap;
   }
   .main-header .main-nav .nav-logo-desktop {
-    width: 10%;
     margin: 0 1rem;
+  }
+  .main-header .main-nav .nav-logo-desktop img {
+    max-height: 65px;
+  }
+}
+.main-header .main-header-right-nav {
+  display: none;
+}
+.main-header .main-header-right-nav svg {
+  width: 26px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+  .main-header .main-header-right-nav {
+    display: flex;
   }
 }
 .main-header .mobile-nav {
@@ -235,6 +266,20 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus {
 .main-header .mobile-nav .mobile-nav-right {
   justify-content: right;
   gap: 15px;
+}
+
+.page-container {
+  padding-top: 74.98px;
+}
+@media screen and (min-width: 992px) {
+  .page-container {
+    padding-top: 86.72px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-container {
+    padding-top: 97.31px;
+  }
 }
 
 .banner-slide {

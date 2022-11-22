@@ -2,7 +2,7 @@ $(document).ready(function () {
   // Toggle mobile sidebar
   $("#sidebar-toggle").on("click", function () {
     $("#sidebar-toggle").find("i").toggleClass("fa-bars fa-times");
-    if ($(".mobile-sidebar").css("display").toLowerCase() == "block") {
+    if ($(".mobile-sidebar").css("display").toLowerCase() == "flex") {
       $(".mobile-sidebar").animate({ width: "0px" }, "slow");
       $(".page-container").css("filter", "none");
       setTimeout(() => {
@@ -12,12 +12,14 @@ $(document).ready(function () {
     } else {
       $("body").css("overflow-y", "hidden");
       $(".page-container").css("filter", "brightness(0.5)");
-      $(".mobile-sidebar").show().animate({ width: "300px" }, "slow");
+      $(".mobile-sidebar")
+        .css("display", "flex")
+        .animate({ width: "300px" }, "slow");
     }
   });
 
   // Toggle search field
-  $("#search-field-toggle").on("click", function () {
+  $(".search-field-toggle").on("click", function () {
     if ($(".search-field").css("display").toLowerCase() == "block") {
       $(".search-field").animate({ height: "0px" }, "slow");
       setTimeout(() => {
@@ -38,4 +40,16 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 2000,
   });
+
+  $(".dropdown").hover(function () {
+    $(".dropdown-toggle", this).trigger("click");
+  });
+
+  $("#sidebar-collapse").on("click", function () {
+    $("#collapsed-chevron").toggleClass("fa-plus fa-minus");
+  });
+
+  $("body").tooltip({ selector: "[data-toggle=tooltip]" });
+
+  feather.replace();
 });

@@ -228,33 +228,43 @@ input:-webkit-autofill {
 .mobile-sidebar {
   display: none;
   position: absolute;
-  top: 75px;
+  top: 76px;
   left: 0;
   width: 0px;
-  height: 100%;
+  height: 100vh;
   z-index: 2;
   background: $pancharm-alt;
+  flex-direction: column;
   a {
     color: #fff !important;
-    display: block;
-    padding: 10px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    white-space: nowrap;
     &:hover {
       text-decoration: none;
       color: #a13e17 !important;
     }
+  }
+  .sidebar-nav {
+    display: block;
+    padding: 10px 20px;
+    white-space: nowrap;
+  }
+  .sidebar-collapse {
+    padding: 0 0 0 30px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .search-field {
   display: none;
   position: absolute;
-  top: 75px;
+  top: 75.98px;
   left: 0;
   width: 100%;
   height: 0;
   z-index: 2;
+  @include min-lg {
+    top: 97px;
+  }
   .search-field-group {
     gap: 10px;
     input,
@@ -271,7 +281,18 @@ input:-webkit-autofill {
 }
 
 .main-header {
-  background: linear-gradient(180deg, $pancharm-main 0%, rgba(0, 0, 0, 0) 100%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  background: white;
+  // background: rgb(161, 62, 23);
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(161, 62, 23, 1) 0%,
+  //   rgba(255, 255, 255, 1) 50%,
+  //   rgba(161, 62, 23, 1) 100%
+  // );
   .main-nav {
     display: none;
     @include min-lg {
@@ -283,9 +304,22 @@ input:-webkit-autofill {
         white-space: nowrap;
       }
       .nav-logo-desktop {
-        width: 10%;
+        img {
+          max-height: 65px;
+        }
         margin: 0 1rem;
       }
+    }
+  }
+  .main-header-right-nav {
+    display: none;
+    svg {
+      width: 26px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    @include min-lg {
+      display: flex;
     }
   }
   .mobile-nav {
@@ -306,6 +340,16 @@ input:-webkit-autofill {
       justify-content: right;
       gap: 15px;
     }
+  }
+}
+
+.page-container {
+  padding-top: 74.98px;
+  @include min-lg {
+    padding-top: 86.72px;
+  }
+  @include min-xl {
+    padding-top: 97.31px;
   }
 }
 
