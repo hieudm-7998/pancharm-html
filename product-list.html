@@ -1,0 +1,743 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pancharm</title>
+    <!-- Set Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <!-- Bootstrap 4 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- Fontawesome 5 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Slick CSS Import -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- Main header -->
+    <div class="main-header py-3">
+      <div class="container-fluid">
+        <!-- Navbar on desktop -->
+        <div class="row align-items-center">
+          <div class="col-1 col-xxl-2"></div>
+          <div class="col-10 col-xxl-8">
+            <div class="main-nav justify-content-center align-items-center">
+              <div class="dropdown show">
+                <a
+                  class="dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Sản phẩm
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">Thời trang nam</a>
+                  <a class="dropdown-item" href="#">Thời trang nữ</a>
+                </div>
+              </div>
+              <a href="">Phụ kiện</a>
+              <a href="">Bộ sưu tập</a>
+              <a class="nav-logo-desktop" href="">
+                <img src="./images/pancharm-logo-nav.png" alt="" />
+              </a>
+              <a href="">Về chúng tôi</a>
+              <a href="">Liên hệ</a>
+              <a href="">Tin tức</a>
+            </div>
+          </div>
+          <div class="col-1 col-xxl-2">
+            <div
+              class="main-header-right-nav justify-content-center align-items-center"
+            >
+              <button class="search-field-toggle bg-transparent">
+                <i
+                  data-feather="search"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Tìm kiếm"
+                ></i>
+              </button>
+              <button class="bg-transparent">
+                <i
+                  data-feather="heart"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Yêu thích"
+                ></i>
+              </button>
+              <button
+                class="bg-transparent d-flex align-items-center"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Giỏ hàng"
+              >
+                <i data-feather="shopping-cart"></i>
+                <span class="badge badge-dark">6</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navbar on mobile -->
+        <div class="mobile-nav">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <div class="mobile-nav-toggle">
+                <button id="sidebar-toggle">
+                  <i data-feather="menu"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="mobile-nav-logo d-block mx-auto">
+                <a class="nav-logo-mobile" href="">
+                  <img src="./images/pancharm-logo-flex.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="mobile-nav-right d-flex align-items-center">
+                <button class="search-field-toggle">
+                  <i data-feather="search"></i>
+                </button>
+                <button>
+                  <i data-feather="heart"></i>
+                </button>
+                <button class="d-flex align-items-center gap-1">
+                  <i data-feather="shopping-cart"></i
+                  ><span class="badge badge-dark">6</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile sidebar -->
+      <div class="mobile-sidebar">
+        <div
+          class="d-flex justify-content-between align-items-center sidebar-nav"
+        >
+          <a
+            data-toggle="collapse"
+            href="#collapseExample"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+            id="sidebar-collapse"
+            >Sản phẩm</a
+          >
+          <i id="collapsed-chevron" class="fas fa-plus text-white"></i>
+        </div>
+        <div class="collapse" id="collapseExample">
+          <div class="sidebar-collapse">
+            <div class="sidebar-nav">
+              <a href="">Thời trang nam</a>
+            </div>
+            <div class="sidebar-nav">
+              <a href="">Thời trang nữ</a>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-nav">
+          <a href="">Phụ kiện</a>
+        </div>
+        <div class="sidebar-nav">
+          <a href="">Bộ sưu tập</a>
+        </div>
+        <div class="sidebar-nav">
+          <a href="">Về chúng tôi</a>
+        </div>
+        <div class="sidebar-nav">
+          <a href="">Liên hệ</a>
+        </div>
+        <div class="sidebar-nav">
+          <a href="">Tin tức</a>
+        </div>
+      </div>
+
+      <!-- Search field -->
+      <div class="search-field p-2 bg-white">
+        <div class="container">
+          <form
+            class="search-field-group d-flex align-items-center justify-content-between"
+          >
+            <input
+              class="rounded w-100 py-1 px-2"
+              id="search-field-input"
+              type="text"
+              placeholder="Nhập tên sản phẩm cần tìm kiếm..."
+            />
+            <button class="rounded py-1 px-3" id="search-field-button">
+              <i data-feather="search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-container">
+      <div class="container">
+        <!-- Product ads -->
+        <div class="product-ads">
+          <img
+            src="./images/banner-example.png"
+            alt=""
+            class="img-fluid d-block mx-auto rounded"
+          />
+        </div>
+
+        <!-- Product filter -->
+        <div class="product-filter product-block my-5 card">
+          <div class="product-header card-header">
+            <h5>Bộ lọc</h5>
+          </div>
+          <div class="product-body card-body">
+            <div class="row">
+              <div class="col-12 col-md-6 mb-3 mb-md-0">
+                <div class="d-flex gap-2 align-items-center mb-3">
+                  <p class="">Lọc theo size :</p>
+                  <button class="size-btn rounded">XS</button>
+                  <button class="size-btn rounded">S</button>
+                  <button class="size-btn rounded">M</button>
+                  <button class="size-btn rounded">L</button>
+                  <button class="size-btn rounded">XL</button>
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                  <p class="">Tình trạng :</p>
+                  <button class="size-btn rounded">Đang giảm giá</button>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="input-group d-flex align-items-center mb-3">
+                  <div class="input-group-prepend mr-3">
+                    <label for="inputGroupSelect01">Sắp xếp theo :</label>
+                  </div>
+                  <select class="custom-select rounded" id="inputGroupSelect01">
+                    <option selected disabled>Chọn cách sắp xếp...</option>
+                    <option value="1">Giá: Tăng dần</option>
+                    <option value="2">Giá: Giảm dần</option>
+                    <option value="3">Tên: A-Z</option>
+                    <option value="4">Tên: Z-A</option>
+                    <option value="5">Mới nhất</option>
+                    <option value="6">Cũ nhất</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product list -->
+        <div class="product-filter product-block my-5 card">
+          <div class="product-header card-header">
+            <h5>Thời trang nam</h5>
+          </div>
+          <div class="product-body card-body">
+            <div class="row mb-3">
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-content">
+                  <div class="product-thumb">
+                    <a href="#">
+                      <img
+                        class="img-fluid d-block mx-auto mb-2"
+                        src="./images/product-example.jpeg"
+                        alt=""
+                      />
+                    </a>
+                    <span class="badge badge-danger discount-tag">-20%</span>
+                  </div>
+                  <div class="product-info d-flex">
+                    <div>
+                      <a class="text-uppercase product-title d-block"
+                        >RELAX SHIRT</a
+                      >
+                      <p>
+                        499,000đ <span class="discount-price">699,000đ</span>
+                      </p>
+                    </div>
+                    <div class="product-icon d-flex align-items-center gap-1">
+                      <button
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào yêu thích"
+                        class="addToFavorite"
+                      >
+                        <i data-feather="heart"></i>
+                      </button>
+                      <button
+                        class="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào giỏ hàng"
+                      >
+                        <i data-feather="shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-content">
+                  <div class="product-thumb">
+                    <a href="#">
+                      <img
+                        class="img-fluid d-block mx-auto mb-2"
+                        src="./images/product-example.jpeg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="product-info d-flex">
+                    <div>
+                      <a class="text-uppercase product-title d-block"
+                        >RELAX SHIRT</a
+                      >
+                      <p>
+                        499,000đ <span class="discount-price">699,000đ</span>
+                      </p>
+                    </div>
+                    <div class="product-icon d-flex align-items-center gap-1">
+                      <button
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào yêu thích"
+                        class="addToFavorite"
+                      >
+                        <i data-feather="heart"></i>
+                      </button>
+                      <button
+                        class="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào giỏ hàng"
+                      >
+                        <i data-feather="shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-content">
+                  <div class="product-thumb">
+                    <a href="#">
+                      <img
+                        class="img-fluid d-block mx-auto mb-2"
+                        src="./images/product-example.jpeg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="product-info d-flex">
+                    <div>
+                      <a class="text-uppercase product-title d-block"
+                        >RELAX SHIRT</a
+                      >
+                      <p>
+                        499,000đ <span class="discount-price">699,000đ</span>
+                      </p>
+                    </div>
+                    <div class="product-icon d-flex align-items-center gap-1">
+                      <button
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào yêu thích"
+                        class="addToFavorite"
+                      >
+                        <i data-feather="heart"></i>
+                      </button>
+                      <button
+                        class="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào giỏ hàng"
+                      >
+                        <i data-feather="shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-content">
+                  <div class="product-thumb">
+                    <a href="#">
+                      <img
+                        class="img-fluid d-block mx-auto mb-2"
+                        src="./images/product-example.jpeg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="product-info d-flex">
+                    <div>
+                      <a class="text-uppercase product-title d-block"
+                        >RELAX SHIRT</a
+                      >
+                      <p>
+                        499,000đ <span class="discount-price">699,000đ</span>
+                      </p>
+                    </div>
+                    <div class="product-icon d-flex align-items-center gap-1">
+                      <button
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào yêu thích"
+                        class="addToFavorite"
+                      >
+                        <i data-feather="heart"></i>
+                      </button>
+                      <button
+                        class="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào giỏ hàng"
+                      >
+                        <i data-feather="shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-content">
+                  <div class="product-thumb">
+                    <a href="#">
+                      <img
+                        class="img-fluid d-block mx-auto mb-2"
+                        src="./images/product-example.jpeg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="product-info d-flex">
+                    <div>
+                      <a class="text-uppercase product-title d-block"
+                        >RELAX SHIRT</a
+                      >
+                      <p>
+                        499,000đ <span class="discount-price">699,000đ</span>
+                      </p>
+                    </div>
+                    <div class="product-icon d-flex align-items-center gap-1">
+                      <button
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào yêu thích"
+                        class="addToFavorite"
+                      >
+                        <i data-feather="heart"></i>
+                      </button>
+                      <button
+                        class="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào giỏ hàng"
+                      >
+                        <i data-feather="shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-content">
+                  <div class="product-thumb">
+                    <a href="#">
+                      <img
+                        class="img-fluid d-block mx-auto mb-2"
+                        src="./images/product-example.jpeg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="product-info d-flex">
+                    <div>
+                      <a class="text-uppercase product-title d-block"
+                        >RELAX SHIRT</a
+                      >
+                      <p>
+                        499,000đ <span class="discount-price">699,000đ</span>
+                      </p>
+                    </div>
+                    <div class="product-icon d-flex align-items-center gap-1">
+                      <button
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào yêu thích"
+                        class="addToFavorite"
+                      >
+                        <i data-feather="heart"></i>
+                      </button>
+                      <button
+                        class="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào giỏ hàng"
+                      >
+                        <i data-feather="shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-content">
+                  <div class="product-thumb">
+                    <a href="#">
+                      <img
+                        class="img-fluid d-block mx-auto mb-2"
+                        src="./images/product-example.jpeg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="product-info d-flex">
+                    <div>
+                      <a class="text-uppercase product-title d-block"
+                        >RELAX SHIRT</a
+                      >
+                      <p>
+                        499,000đ <span class="discount-price">699,000đ</span>
+                      </p>
+                    </div>
+                    <div class="product-icon d-flex align-items-center gap-1">
+                      <button
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào yêu thích"
+                        class="addToFavorite"
+                      >
+                        <i data-feather="heart"></i>
+                      </button>
+                      <button
+                        class="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào giỏ hàng"
+                      >
+                        <i data-feather="shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-content">
+                  <div class="product-thumb">
+                    <a href="#">
+                      <img
+                        class="img-fluid d-block mx-auto mb-2"
+                        src="./images/product-example.jpeg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="product-info d-flex">
+                    <div>
+                      <a class="text-uppercase product-title d-block"
+                        >RELAX SHIRT</a
+                      >
+                      <p>
+                        499,000đ <span class="discount-price">699,000đ</span>
+                      </p>
+                    </div>
+                    <div class="product-icon d-flex align-items-center gap-1">
+                      <button
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào yêu thích"
+                        class="addToFavorite"
+                      >
+                        <i data-feather="heart"></i>
+                      </button>
+                      <button
+                        class="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào giỏ hàng"
+                      >
+                        <i data-feather="shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-content">
+                  <div class="product-thumb">
+                    <a href="#">
+                      <img
+                        class="img-fluid d-block mx-auto mb-2"
+                        src="./images/product-example.jpeg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="product-info d-flex">
+                    <div>
+                      <a class="text-uppercase product-title d-block"
+                        >RELAX SHIRT</a
+                      >
+                      <p>
+                        499,000đ <span class="discount-price">699,000đ</span>
+                      </p>
+                    </div>
+                    <div class="product-icon d-flex align-items-center gap-1">
+                      <button
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào yêu thích"
+                        class="addToFavorite"
+                      >
+                        <i data-feather="heart"></i>
+                      </button>
+                      <button
+                        class="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Thêm vào giỏ hàng"
+                      >
+                        <i data-feather="shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Product pagination -->
+            <nav aria-label="...">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1">Trang trước</a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#"
+                    >1 <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Tiếp theo</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3 mb-3 mb-md-0">
+            <h4 class="font-weight-bold text-uppercase mb-3">May we help</h4>
+            <a class="d-block py-2" href="">Contact us</a>
+            <a class="d-block py-2" href="">Order by phone</a>
+            <a class="d-block py-2" href="">FAQ</a>
+            <a class="d-block py-2" href="">Delivery</a>
+            <a class="d-block py-2" href="">Warranty, Exchanges & Returns</a>
+            <a class="d-block py-2" href="">Stores</a>
+          </div>
+          <div class="col-12 col-md-3 mb-3 mb-md-0">
+            <h4 class="font-weight-bold text-uppercase mb-3">Company</h4>
+            <a class="d-block py-2" href="">About us</a>
+            <a class="d-block py-2" href="">Stories</a>
+            <a class="d-block py-2" href="">Press</a>
+            <a class="d-block py-2" href="">Production</a>
+          </div>
+          <div class="col-12 col-md-3 mb-3 mb-md-0">
+            <h4 class="font-weight-bold text-uppercase mb-3">Contact</h4>
+            <p class="d-block py-2" href="">Call : xxxxxxxxxxxx</p>
+            <p class="d-block py-2" href="">Email : pancharm@gmail.com</p>
+            <p class="d-block py-2" href="">Address : Vietnam</p>
+          </div>
+          <div class="col-12 col-md-3 mb-3 mb-md-0">
+            <img
+              src="./images/pancharm-logo-flex.png"
+              alt=""
+              class="img-fluid mb-3"
+            />
+            <p class="font-weight-bold">Bring you bests.</p>
+            <div class="social-media my-3">
+              <img src="./images/icon/telegram-icon.png" alt="" />
+              <img src="./images/icon/tiktok-icon.png" alt="" />
+              <img src="./images/icon/twitter-icon.png" alt="" />
+              <img src="./images/icon/youtube-icon.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-center">
+      Copyright©<span class="font-weight-bold">Pancharm</span>. All right
+      reserved.
+    </p>
+
+    <div id="notifications"></div>
+
+    <!-- jQuery 3.6.1 CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap 4 JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Slick JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Feather icon JS -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./js/notify.min.js"></script>
+    <!-- Local JS -->
+    <script defer src="./js/app.js"></script>
+  </body>
+</html>

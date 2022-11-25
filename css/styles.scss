@@ -146,7 +146,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+label {
   margin-bottom: 0;
   font-family: $montserrat-400;
 }
@@ -161,6 +162,8 @@ body {
 
 body {
   position: relative;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 p {
@@ -377,5 +380,166 @@ input:-webkit-autofill {
     width: 100%;
     color: white;
     padding: 1rem;
+  }
+}
+
+.gallery-block {
+  @include bigger-block();
+}
+
+.gallery-bg {
+  position: absolute;
+  top: 100px;
+  left: -100px;
+  z-index: -1;
+  img {
+    width: 200px;
+  }
+}
+
+.gallery-bg-2 {
+  position: absolute;
+  top: 700px;
+  right: -100px;
+  z-index: -1;
+  img {
+    width: 200px;
+  }
+}
+.gallery-bg-3 {
+  position: absolute;
+  top: 1300px;
+  left: -100px;
+  z-index: -1;
+  img {
+    width: 200px;
+  }
+}
+.gallery-bg-4 {
+  position: absolute;
+  top: 1900px;
+  right: -100px;
+  z-index: -1;
+  img {
+    width: 200px;
+  }
+}
+.gallery-bg-5 {
+  position: absolute;
+  top: 2500px;
+  left: -100px;
+  z-index: -1;
+  img {
+    width: 200px;
+  }
+}
+
+/* the slides */
+.slick-slide {
+  margin: 0 10px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* the parent */
+.slick-list {
+  margin: 0 -10px;
+}
+
+.gap-1 {
+  gap: 5px;
+}
+
+.gap-2 {
+  gap: 10px;
+}
+
+.size-btn {
+  padding: 0 5px;
+  background: none;
+  border: 1px solid $pancharm-alt;
+  cursor: pointer;
+  transition: 0.2s background-color ease-in-out;
+  &:hover {
+    border: 1px solid $pancharm-main;
+    color: white;
+    background-color: $pancharm-main;
+  }
+}
+
+.product-block {
+  .product-header {
+    background-color: $pancharm-main;
+    color: white;
+    padding: 0.5rem 20px;
+  }
+  .product-body {
+    .product-content {
+      margin-bottom: 1rem;
+      .product-thumb {
+        position: relative;
+        opacity: 1;
+        transition: 0.3s opacity ease-in-out;
+        &:hover {
+          opacity: 0.8;
+        }
+        .discount-tag {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+        }
+      }
+      .product-info {
+        flex-direction: column;
+        gap: 5px;
+        @include min-lg {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .product-title {
+          font-size: 1rem;
+          cursor: pointer;
+        }
+        .discount-price {
+          font-size: 0.85rem;
+          color: $pancharm-main;
+          text-decoration: line-through;
+          font-style: italic;
+        }
+        .product-icon {
+          button {
+            background: none;
+            cursor: pointer;
+            svg {
+              transition: 0.3s color ease-in-out;
+              &:hover {
+                color: $pancharm-main;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#notifications {
+  cursor: pointer;
+  position: fixed;
+  right: 0px;
+  z-index: 9999;
+  bottom: 0px;
+  margin-bottom: 22px;
+  margin-right: 15px;
+  max-width: 300px;
+}
+
+.page-item.active {
+  .page-link {
+    background-color: $pancharm-main;
+    border-color: $pancharm-main;
+    color: white !important;
   }
 }

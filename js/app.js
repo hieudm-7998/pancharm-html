@@ -41,15 +41,49 @@ $(document).ready(function () {
     autoplaySpeed: 2000,
   });
 
+  // Handle nav dropdown always show on hover
   $(".dropdown").hover(function () {
     $(".dropdown-toggle", this).trigger("click");
   });
 
+  // Handle mobile sidebar icon change on click
   $("#sidebar-collapse").on("click", function () {
     $("#collapsed-chevron").toggleClass("fa-plus fa-minus");
   });
 
+  // Handle show tooltip on navbar icon
   $("body").tooltip({ selector: "[data-toggle=tooltip]" });
 
+  // Handle feather icon
   feather.replace();
+
+  $(".addToFavorite").on("click", function () {
+    Notify("Đã thêm vào yêu thích !", null, null, "success");
+  });
+
+  $(".addToCart").on("click", function () {
+    Notify("Đã thêm vào giỏ hàng !", null, null, "success");
+  });
+
+  // Gallery slide
+  $(".gallery-slide").slick({
+    infinite: true,
+    slidesToShow: 4,
+    arrows: false,
+    dots: true,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
+  });
 });
