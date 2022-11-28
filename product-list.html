@@ -44,7 +44,7 @@
     <div class="main-header py-3">
       <div class="container-fluid">
         <!-- Navbar on desktop -->
-        <div class="row align-items-center">
+        <div class="row align-items-center w-100">
           <div class="col-1 col-xxl-2"></div>
           <div class="col-10 col-xxl-8">
             <div class="main-nav justify-content-center align-items-center">
@@ -67,7 +67,7 @@
                 </div>
               </div>
               <a href="">Phụ kiện</a>
-              <a href="">Bộ sưu tập</a>
+              <a href="./collection.html">Bộ sưu tập</a>
               <a class="nav-logo-desktop" href="">
                 <img src="./images/pancharm-logo-nav.png" alt="" />
               </a>
@@ -127,17 +127,19 @@
               </div>
             </div>
             <div class="col-3">
-              <div class="mobile-nav-right d-flex align-items-center">
+              <div
+                class="mobile-nav-right d-flex align-items-center justify-content-end"
+              >
                 <button class="search-field-toggle">
                   <i data-feather="search"></i>
                 </button>
-                <button>
+                <!-- <button>
                   <i data-feather="heart"></i>
                 </button>
                 <button class="d-flex align-items-center gap-1">
                   <i data-feather="shopping-cart"></i
                   ><span class="badge badge-dark">6</span>
-                </button>
+                </button> -->
               </div>
             </div>
           </div>
@@ -145,6 +147,18 @@
       </div>
       <!-- Mobile sidebar -->
       <div class="mobile-sidebar">
+        <div
+          class="sidebar-nav d-flex justify-content-between align-items-center"
+        >
+          <a href="#">Giỏ hàng</a>
+          <i data-feather="shopping-cart" class="text-white"></i>
+        </div>
+        <div
+          class="sidebar-nav border-bottom d-flex justify-content-between align-items-center"
+        >
+          <a href="#">Yêu thích</a>
+          <i data-feather="heart" class="text-white"></i>
+        </div>
         <div
           class="d-flex justify-content-between align-items-center sidebar-nav"
         >
@@ -173,7 +187,7 @@
           <a href="">Phụ kiện</a>
         </div>
         <div class="sidebar-nav">
-          <a href="">Bộ sưu tập</a>
+          <a href="./collection.html">Bộ sưu tập</a>
         </div>
         <div class="sidebar-nav">
           <a href="">Về chúng tôi</a>
@@ -707,6 +721,23 @@
       Copyright©<span class="font-weight-bold">Pancharm</span>. All right
       reserved.
     </p>
+
+    <!-- Gallery pattern background -->
+    <div class="gallery-bg">
+      <img src="./images/pancharm-logo.png" alt="" />
+    </div>
+    <div class="gallery-bg-2">
+      <img src="./images/pancharm-logo.png" alt="" />
+    </div>
+    <div class="gallery-bg-3">
+      <img src="./images/pancharm-logo.png" alt="" />
+    </div>
+    <div class="gallery-bg-4">
+      <img src="./images/pancharm-logo.png" alt="" />
+    </div>
+    <div class="gallery-bg-5">
+      <img src="./images/pancharm-logo.png" alt="" />
+    </div>
 
     <div id="notifications"></div>
 

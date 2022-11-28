@@ -86,4 +86,60 @@ $(document).ready(function () {
       },
     ],
   });
+
+  $("#lightSlider").lightSlider({
+    gallery: true,
+    item: 1,
+    auto: true,
+    loop: true,
+    thumbItem: 6,
+    controls: false,
+    adaptiveHeight: true,
+    slideMargin: 0,
+    currentPagerPosition: "left",
+    // onSliderLoad: function (el) {
+    //   el.lightGallery({
+    //     selector: "#imageGallery .lslide",
+    //   });
+    // },
+  });
+
+  // Product quantity handle
+  $(".add").click(function () {
+    if ($(this).prev().val() < 10) {
+      $(this)
+        .prev()
+        .val(+$(this).prev().val() + 1);
+    }
+  });
+  $(".sub").click(function () {
+    if ($(this).next().val() > 1) {
+      if ($(this).next().val() > 1)
+        $(this)
+          .next()
+          .val(+$(this).next().val() - 1);
+    }
+  });
+
+  // Product detail similar product handle
+  $(".similar-product").slick({
+    infinite: true,
+    slidesToShow: 4,
+    arrows: false,
+    dots: true,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
+  });
 });
