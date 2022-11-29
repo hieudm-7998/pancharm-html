@@ -36,6 +36,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./js/lightslider.min.css" />
     <!-- Local CSS -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -221,144 +222,86 @@
     </div>
 
     <div class="page-container">
-      <!-- Banner slide -->
-      <div class="banner-slide mb-5">
-        <div class="slide">
-          <img class="img-fluid" src="./images/banner-example.png" alt="" />
-        </div>
-        <div class="slide">
-          <img class="img-fluid" src="./images/banner-example.png" alt="" />
-        </div>
-        <div class="slide">
-          <img class="img-fluid" src="./images/banner-example.png" alt="" />
-        </div>
-      </div>
-
-      <div class="container pb-5">
-        <div class="row">
-          <div class="col-12 col-md-6 mb-3 mb-lg-0">
-            <div class="category-box">
-              <img
-                src="./images/banner-example.png"
-                alt=""
-                class="img-fluid rounded"
-              />
-              <div class="category-box-overlay">
-                <h2>Men</h2>
-              </div>
-            </div>
+      <div class="container py-5">
+        <div class="cart-detail">
+          <h3 class="font-weight-bold mb-5">Sản phẩm yêu thích</h3>
+          <div class="cart-detail-table pb-3 border-bottom">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Tên sản phẩm</th>
+                  <th scope="col">Đơn giá</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="cart-product-thumb" scope="row">
+                    <img
+                      src="./images/product-detail-1.jpeg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </th>
+                  <td>Sản phẩm 1</td>
+                  <td>299.000đ</td>
+                  <td>
+                    <button type="button" class="cart-delete-btn">
+                      <i data-feather="trash-2"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="cart-product-thumb" scope="row">
+                    <img
+                      src="./images/product-detail-1.jpeg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </th>
+                  <td>Sản phẩm 2</td>
+                  <td>299.000đ</td>
+                  <td>
+                    <button type="button" class="cart-delete-btn">
+                      <i data-feather="trash-2"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="cart-product-thumb" scope="row">
+                    <img
+                      src="./images/product-detail-1.jpeg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </th>
+                  <td>Sản phẩm 3</td>
+                  <td>299.000đ</td>
+                  <td>
+                    <button type="button" class="cart-delete-btn">
+                      <i data-feather="trash-2"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="col-12 col-md-6">
-            <div class="category-box">
-              <img
-                src="./images/banner-example.png"
-                alt=""
-                class="img-fluid rounded"
-              />
-              <div class="category-box-overlay">
-                <h2>Women</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- New Collection -->
-      <div class="new-collection py-5 bg-main">
-        <div class="container">
-          <h1 class="font-weight-bold text-uppercase text-white">
-            Bộ sưu tập mới 2022
-          </h1>
-          <p class="text-justify my-4 text-white">
-            KHÁM PHÁ NHỮNG ĐIỂM ĐẶC BIỆT TRONG GOLF COLLECTION 22
-            <br /><br />Đâu là những lý do khiến BST Golf Collection 22 chinh
-            phục được giới mộ điệu? Đánh dấu những bước tiến quan trọng trong
-            hành trình chinh phục chất liệu và công nghệ, BST Golf Collection 22
-            mang đến tinh thần truyền cảm hứng cho cộng đồng, lan tỏa năng
-            lượng.<br /><br />
-            Giờ đây, những golfer chuyên nghiệp và những người yêu
-          </p>
-          <button class="inverse-main-button d-block mx-auto">See more</button>
-        </div>
-      </div>
-
-      <div class="new-arrivals py-5">
-        <div class="container">
-          <h1 class="text-center text-uppercase main-color font-weight-bold">
-            New Arrivals
-          </h1>
-          <img
-            src="./images/banner-example.png"
-            alt=""
-            class="img-fluid my-4 rounded"
-          />
-          <p class="text-justify mb-4">
-            Sự tự do trong tâm trí, trong cuộc sống được trân trọng khiến diện
-            mạo trở nên tươi mới hơn. Khi nguồn cảm hứng đến từ những điều đơn
-            giản, những lựa chọn thanh lịch sẽ giúp nâng tầm phong cách. Sự tân
-            thời trong địa hạt thời trang Italy chính là những tác phẩm lịch lãm
-            nhận được sự công nhận trên toàn thế giới nhờ sự biểu đạt đặc biệt.
-            Hãy để những outfit của GIOVANNI dẫn lối, khám phá phong cách tiềm
-            ẩn trong bạn.
-          </p>
-          <button class="main-button d-block mx-auto">Buy now</button>
-        </div>
-      </div>
-
-      <div class="our-brand py-5 bg-main">
-        <div class="container">
-          <h1 class="text-white text-uppercase font-weight-bold mb-4">
-            Discover our brands
-          </h1>
-          <div class="row">
-            <div class="col-6 col-md-3 mb-3 mb-lg-0">
-              <div class="category-box">
-                <img
-                  src="./images/square-product-example.jpg"
-                  alt=""
-                  class="img-fluid rounded"
-                />
-                <div class="category-box-overlay">
-                  <h2>Brand</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 mb-3 mb-lg-0">
-              <div class="category-box">
-                <img
-                  src="./images/square-product-example.jpg"
-                  alt=""
-                  class="img-fluid rounded"
-                />
-                <div class="category-box-overlay">
-                  <h2>Brand</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 mb-3 mb-lg-0">
-              <div class="category-box">
-                <img
-                  src="./images/square-product-example.jpg"
-                  alt=""
-                  class="img-fluid rounded"
-                />
-                <div class="category-box-overlay">
-                  <h2>Brand</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 mb-3 mb-lg-0">
-              <div class="category-box">
-                <img
-                  src="./images/square-product-example.jpg"
-                  alt=""
-                  class="img-fluid rounded"
-                />
-                <div class="category-box-overlay">
-                  <h2>Brand</h2>
-                </div>
-              </div>
-            </div>
+          <div
+            class="d-flex justify-content-between align-items-center cart-nav-btn-group py-4"
+          >
+            <button
+              type="button"
+              class="inverse-main-button d-flex align-items-center justify-content-center"
+            >
+              <i data-feather="arrow-left"></i> Tiếp tục mua hàng
+            </button>
+            <button
+              type="button"
+              class="main-button d-flex align-items-center justify-content-center"
+            >
+              Đi tới giỏ hàng <i data-feather="arrow-right"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -410,6 +353,8 @@
       Copyright©<span class="font-weight-bold">Pancharm</span>. All right
       reserved.
     </p>
+
+    <div id="notifications"></div>
 
     <div class="go-to-top-btn">
       <button
@@ -489,6 +434,8 @@
     ></script>
     <!-- Feather icon JS -->
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./js/lightslider.min.js"></script>
+    <script src="./js/notify.min.js"></script>
     <!-- Local JS -->
     <script defer src="./js/app.js"></script>
   </body>

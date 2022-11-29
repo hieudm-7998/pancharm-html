@@ -1,4 +1,18 @@
 $(document).ready(function () {
+  // Go to top button handle
+  $(window).scroll(function () {
+    if ($(window).scrollTop()) {
+      $(".go-to-top-btn").fadeIn();
+    } else {
+      $(".go-to-top-btn").fadeOut();
+    }
+  });
+
+  $(".go-to-top-btn").click(function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return false;
+  });
+
   // Toggle mobile sidebar
   $("#sidebar-toggle").on("click", function () {
     $("#sidebar-toggle").find("i").toggleClass("fa-bars fa-times");
@@ -87,23 +101,6 @@ $(document).ready(function () {
     ],
   });
 
-  $("#lightSlider").lightSlider({
-    gallery: true,
-    item: 1,
-    auto: true,
-    loop: true,
-    thumbItem: 6,
-    controls: false,
-    adaptiveHeight: true,
-    slideMargin: 0,
-    currentPagerPosition: "left",
-    // onSliderLoad: function (el) {
-    //   el.lightGallery({
-    //     selector: "#imageGallery .lslide",
-    //   });
-    // },
-  });
-
   // Product quantity handle
   $(".add").click(function () {
     if ($(this).prev().val() < 10) {
@@ -141,5 +138,24 @@ $(document).ready(function () {
         },
       },
     ],
+  });
+
+  // Cart quantity handle
+  var input = $(".cart-quantity-input"),
+    minValue = parseInt(input.attr("min")),
+    maxValue = parseInt(input.attr("max"));
+
+  $(".cart-quantity-plus").on("click", function () {
+    var inputValue = input.val();
+    if (inputValue < maxValue) {
+      input.val(parseInt(inputValue) + 1);
+    }
+  });
+
+  $(".cart-quantity-minus").on("click", function () {
+    var inputValue = input.val();
+    if (inputValue > minValue) {
+      input.val(parseInt(inputValue) - 1);
+    }
   });
 });
